@@ -1,0 +1,48 @@
+body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+
+#profile {
+	width: 238.5px;
+	height: 238.5px;
+}
+
+#topper {
+	height:400px;
+}
+
+.jobfocus{
+	background-color:yellow;
+}
+
+/* Testing starts here */
+
+.jobDesc {
+	display:none;
+}
+
+.job {
+	/* border: 2px dashed black; */
+	margin-top: 15px;
+	border-bottom: 1px solid gray;
+}
+
+
+.jobTitle{
+	font-weight:bold;
+	line-height: 30px;
+}
+
+.headline {
+	border-bottom: 4px solid black;
+}
+
+#profile {
+	margin: 10px;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+	font-size: 1.5em;
+}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>This is my sign up page.</h2>
+<form method="post">
+	<table cellpadding="10">
+		<tr>
+			<label>
+				<td>Username</td>
+				<td><input type="text" value="{{ name }}" name="username"></td>
+				<td><span class="error">{{ errorN }}</span></td>
+			</label>
+		</tr>
+		<tr>
+			<label>
+				<td>Password</td>
+				<td><input type="password" name="password"></td>
+				<td><span class="error">{{ errorP }}</span></td>
+			</label>
+		</tr>
+		<tr>
+			<label>
+				<td>Verify Password</td>
+				<td><input type="password" name="verify"></td>
+				<td><span class="error">{{ errorV }}</span></td>
+			</label>
+		</tr>
+		<tr>
+			<label>
+				<td>Email (optional)</td>
+				<td><input type="text" value="{{ email }}" name="email"></td>.
+				<td><span class="error">{{ errorE }}</span></td>
+			</label>
+		<tr>
+	</table>
+	<input type="submit">
+</form>
+
+
+{% endblock %}

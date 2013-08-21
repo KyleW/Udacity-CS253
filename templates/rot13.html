@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<!-- method="post" action="/testform" -->
+<form method="post" action="/rot13" >
+	Rot13 this value:<br>
+	<textarea name="text" label="text" style="height: 100px; width: 400px;">{{ rot13 }}</textarea>
+	<!-- <input type="textbox" value="{{ rot13 }}"  > -->
+	<br>
+	<input type="submit">
+</form>
+
+<!-- <p>last value: {{ last }}</p>
+
+<p>rot13: {{ rot13 }}</p>
+
+<p style="color:red; font-weight:bold ; text-align:center">{{ error }}</p>
+ -->
+{% endblock %}
