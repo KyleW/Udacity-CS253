@@ -20,6 +20,7 @@ import jinja2
 import rot13
 import signup
 import blogger
+from google.appengine.ext import db
 
 jinja_environment=jinja2.Environment(autoescape=True,loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__),'templates')))
 
@@ -40,15 +41,21 @@ class Hello(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([('/', MainHandler),
 							('/resume',Resume),
-							# unit1
+							# unit 1
 							('/hello',Hello),
 
+							# unit1 2
 							('/rot13',rot13.Rot13),
 
-							('/signup',signup.Signup),
-							('/welcome',signup.Welcome),
-
+							# unit 3
 							('/blog',blogger.Blog),
-							('/newpost',blogger.NewPost)
+							('/newpost',blogger.NewPost),
+							('/blog/newpost',blogger.NewPost),                               
+							('/blog/([0-9]+)', blogger.PostPage),
+
+
+							('/signup',signup.Signup),
+							('/welcome',signup.Welcome)
+
 							],
 							 debug=True)
