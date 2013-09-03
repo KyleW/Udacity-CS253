@@ -3,6 +3,11 @@
 
 {% block content %}
 
-<h2> here is where my totally awesome blog will go </h2>
+	{% for post in posts %} 
+	<div class ="post">
+		<div class="post-title">{{ post.subject }}</div>
+		<pre class="post-body">{{ post.content }}</pre>
+	</div>
+	{% endfor %}
 
 {% endblock %}
